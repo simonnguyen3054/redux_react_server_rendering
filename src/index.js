@@ -1,3 +1,4 @@
+//starting point for server side application
 import express from "express";
 
 const app = express();
