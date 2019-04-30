@@ -9,7 +9,8 @@ import { createStore, applyMiddleware} from "redux";
 //thunk is used to handle async action creators
 import thunk from "redux-thunk";
 //provider is used to tie store and react app together
-import { provider } from "react-redux";
+import { Provider } from "react-redux";
+import reducers from "./reducers";
 
 //create new redux store to used on the client side of the application
 const store = createStore(reducers, {}, applyMiddleware(thunk));
