@@ -2,6 +2,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
+import "babel-polyfill";
 import Routes from "./Routes";
 //createStore is used to make redux store
 //applyMiddleware is used to hookup and middleware inside the application
