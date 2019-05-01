@@ -12,6 +12,7 @@ import thunk from "redux-thunk";
 //provider is used to tie store and react app together
 import { Provider } from "react-redux";
 import reducers from "./reducers";
+import {renderRoutes} from "react-router-config";
 
 //create new redux store to used on the client side of the application
 const store = createStore(reducers, {}, applyMiddleware(thunk));
@@ -19,7 +20,7 @@ const store = createStore(reducers, {}, applyMiddleware(thunk));
 ReactDOM.hydrate(
   <Provider store={store}>
     <BrowserRouter>
-      <Routes />
+      <div>{renderRoutes(Routes)}</div>
     </BrowserRouter>
   </Provider>,
   document.querySelector("#root")
